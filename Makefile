@@ -50,9 +50,8 @@ clean-test: ## remove test and coverage artifacts
 lint: ## check style with flake8
 	flake8 json_annotate tests
 
-test: ## run tests quickly with the default Python
-	
-		python setup.py test
+test:
+	nosetests --with-doctest
 
 test-all: ## run tests on every Python version with tox
 	tox

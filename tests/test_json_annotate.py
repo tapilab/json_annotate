@@ -12,7 +12,7 @@ Tests for `json_annotate` module.
 import sys
 import unittest
 
-from json_annotate import json_annotate
+from json_annotate import main
 
 
 
