@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-A command-line tool to infer the demographics of Twitter users.
+A command-line tool to annotate json files with classification labels.
 
 usage: json-annotate --input <file> --output <file> --display-fields <s> --search-fields <s> --labels <s> --id-field <s> [--include-terms <s> --exclude-terms <s> --label-name <s>] [--help]
 
