@@ -11,9 +11,9 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [
-    # TODO: put package requirements here
-]
+# read requirements
+with open('requirements.txt') as f:
+    requirements = f.read().splitlines()
 
 test_requirements = [
     # TODO: put package test requirements here
@@ -21,7 +21,7 @@ test_requirements = [
 
 setup(
     name='json_annotate',
-    version='0.1.1',
+    version='0.1.2',
     description="..",
     long_description=readme + '\n\n' + history,
     author="Aron Culotta",
