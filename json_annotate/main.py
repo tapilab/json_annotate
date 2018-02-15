@@ -46,7 +46,8 @@ def main():
 def read_json(fname):
     ret = []
     for line in open(fname):
-        ret.append(json.loads(line))
+        if len(line) > 2:
+            ret.append(json.loads(line))
     return ret
 
 def split_args(args, k):
@@ -107,6 +108,8 @@ def get_matches(data, includes, excludes, search_fields, labeled, id_field):
         if d[id_field] in labeledids:
             continue
         match = False
+        if len(includes) == 0:  # return all results.
+            match = True
         for field in search_fields:
             if does_match(d[field], includes):
                 match = True
